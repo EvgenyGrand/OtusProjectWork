@@ -1,7 +1,7 @@
-package TaskFirst;
+package taskFirst;
 
-import components.FirstTask.CountCurse;
-import components.FirstTask.MainMenuComponent;
+import components.firstTask.CountCurse;
+import components.firstTask.MainMenuComponent;
 import components.MainPage;
 import data.DriverData;
 import exception.BrowserNotSupportException;

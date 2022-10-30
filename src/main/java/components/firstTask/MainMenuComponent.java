@@ -1,11 +1,9 @@
-package components.FirstTask;
+package components.firstTask;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.AbsBasePages;
-
-import java.util.List;
 
 public class MainMenuComponent extends AbsBasePages {
 
