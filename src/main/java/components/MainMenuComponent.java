@@ -1,4 +1,4 @@
-﻿package components;
+package components;
 
 import data.CourcesData;
 import data.MainMenuItemsData;
@@ -19,7 +19,7 @@ public class MainMenuComponent extends AbsBasePages {
     @FindBy(xpath = "//*[contains(@class, 'header2-menu_main')]/*[contains(@class, 'header2-menu__item')][.//*[text()='Курсы']]")
     private WebElement mainMenu;
 
-    @FindBy(xpath = "//*[contains(@class, 'header2-menu_main')]/*[contains(@class, 'header2-menu__item')][.//*[text()='Курсы']]//a[@title='Тестирование'")
+    @FindBy(xpath = "//*[contains(@class, 'header2-menu_main')]/*[contains(@class, 'header2-menu__item')][.//*[text()='Курсы']]//a[@title='Тестирование']")
     private WebElement subMenu;
 
 
