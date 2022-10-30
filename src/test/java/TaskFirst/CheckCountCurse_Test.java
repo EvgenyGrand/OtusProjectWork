@@ -1,17 +1,19 @@
-package otusprojectwork;
+package TaskFirst;
 
-import components.MainMenuComponent;
+import components.FirstTask.CountCurse;
+import components.FirstTask.MainMenuComponent;
 import components.MainPage;
 import data.DriverData;
 import exception.BrowserNotSupportException;
 import factory.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
-public class CheckOtusSite {
+public class CheckCountCurse_Test {
 
     private WebDriver driver;
 
@@ -31,15 +33,26 @@ public class CheckOtusSite {
     }
 
     @Test
-   public void checkOtusCourses() throws InterruptedException {
+    public void checkOtusCourses() throws InterruptedException {
         driver.manage().window().maximize();
 
         MainPage mainPage = new MainPage(driver);
+        CountCurse countCurse = new CountCurse(driver);
         MainMenuComponent mainMenuComponent = new MainMenuComponent(driver);
         mainPage.open();
         mainMenuComponent.clickCourseTesting();
+        countCurse.getCountCurseofTesting();
 
+    }
+
+    @AfterEach
+    public void close() {
+        if (this.driver != null) {
+            this.driver.close();
+            this.driver.quit();
+        }
 
     }
 
 }
+
