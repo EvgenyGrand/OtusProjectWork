@@ -2,9 +2,7 @@ package otusprojectwork;
 
 import components.MainMenuComponent;
 import components.MainPage;
-import data.CourcesData;
 import data.DriverData;
-import data.MainMenuItemsData;
 import exception.BrowserNotSupportException;
 import factory.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -41,9 +39,7 @@ public class CheckOtusSite {
         mainPage.open();
         mainMenuComponent.clickCourseTesting();
 
-//        new MainMenuComponent(driver)
-//                .moveCursorToItem(MainMenuItemsData.Cources)
-//                .clickCourseTesting(CourcesData.Testing);
+
     }
 
 }

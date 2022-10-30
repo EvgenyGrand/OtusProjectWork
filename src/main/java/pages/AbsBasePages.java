@@ -61,8 +61,7 @@ public abstract class AbsBasePages {
     }
 
     public void moveToElement(WebElement elementFirst, WebElement elementSecond) {
-//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", elementFirst);
-        action.moveToElement(elementFirst).moveToElement(elementSecond).click().build().perform();
+        action.moveToElement(elementFirst).moveToElement(elementSecond).click().perform();
     }
 
     public void fillField(WebElement element, String input) {
