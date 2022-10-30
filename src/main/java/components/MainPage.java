@@ -12,11 +12,4 @@ public class MainPage extends AbsBasePages {
 
     }
 
-    @FindBy(xpath = "//*[@class = 'header2__auth js-open-modal']")
-    private WebElement registrationButton;
-
-
-    public void clickRegistrationButton() throws InterruptedException {
-        clickToElement(registrationButton);
     }
-}

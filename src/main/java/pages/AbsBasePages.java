@@ -12,20 +12,21 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Locale;
 import java.util.logging.LogManager;
 
 public abstract class AbsBasePages {
 
 
-    private String hostname = System.getProperty("base.url");
-    private String login = System.getProperty("login");
-    private String password = System.getProperty("password");
-    private String explisityWait = System.getProperty("explisityWait");
+    private String hostname = System.getProperty("base.url").toLowerCase(Locale.ROOT);
+    private String login = System.getProperty("login").toLowerCase(Locale.ROOT);
+    private String password = System.getProperty("password").toLowerCase(Locale.ROOT);
+    private String explisityWait = System.getProperty("explisityWait").toLowerCase(Locale.ROOT);
 
 
     protected WebDriver driver;
     protected Actions action;
-    
+
 
 
 
@@ -37,7 +38,6 @@ public abstract class AbsBasePages {
         PageFactory.initElements(driver,  this);
 
     }
-
 
     public void open() {
         driver.get(hostname);
@@ -61,7 +61,7 @@ public abstract class AbsBasePages {
     }
 
     public void moveToElement(WebElement elementFirst, WebElement elementSecond) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", elementFirst);
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", elementFirst);
         action.moveToElement(elementFirst).moveToElement(elementSecond).click().build().perform();
     }
 

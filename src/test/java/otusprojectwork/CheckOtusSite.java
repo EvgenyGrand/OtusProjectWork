@@ -1,7 +1,10 @@
 package otusprojectwork;
 
+import components.MainMenuComponent;
 import components.MainPage;
+import data.CourcesData;
 import data.DriverData;
+import data.MainMenuItemsData;
 import exception.BrowserNotSupportException;
 import factory.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -25,14 +28,22 @@ public class CheckOtusSite {
     @BeforeEach
     public void initDriver() throws BrowserNotSupportException {
 
-        driver = new WebDriverFactory().getDriver(DriverData.FIREFOX, null);
+        driver = new WebDriverFactory().getDriver(DriverData.CHROME, null);
 
     }
 
     @Test
-   public void checkOtusCourses(){
+   public void checkOtusCourses() throws InterruptedException {
+        driver.manage().window().maximize();
+
         MainPage mainPage = new MainPage(driver);
+        MainMenuComponent mainMenuComponent = new MainMenuComponent(driver);
         mainPage.open();
+        mainMenuComponent.clickCourseTesting();
+
+//        new MainMenuComponent(driver)
+//                .moveCursorToItem(MainMenuItemsData.Cources)
+//                .clickCourseTesting(CourcesData.Testing);
     }
 
 }
