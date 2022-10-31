@@ -1,9 +1,10 @@
-package taskSecond;
+package taskThree;
 
 import components.MainPage;
+import components.firstTask.CountCurse;
 import components.firstTask.MainMenuComponent;
-import components.secondTask.qalead.CheckParamQALeadCard;
-import components.secondTask.qalead.ClickToCardCourseQaLead;
+import components.thirdTask.CheckStatusEvent;
+import components.thirdTask.MainMenuCalendar;
 import data.DriverData;
 import exception.BrowserNotSupportException;
 import factory.WebDriverFactory;
@@ -14,7 +15,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
-public class CheckParametrCourseQaLead_Test {
+public class CheckStausCardCalendar_Test {
 
     private WebDriver driver;
 
@@ -30,30 +31,29 @@ public class CheckParametrCourseQaLead_Test {
     public void initDriver() throws BrowserNotSupportException {
 
         driver = new WebDriverFactory().getDriver(DriverData.CHROME, null);
-    }
 
+    }
 
     @Test
-    public void CheckParametrCard() {
+    public void checkOtusCourses() {
         driver.manage().window().maximize();
+
         MainPage mainPage = new MainPage(driver);
-        MainMenuComponent mainMenuComponent = new MainMenuComponent(driver);
-        ClickToCardCourseQaLead clickToCardCourse = new ClickToCardCourseQaLead(driver);
-        CheckParamQALeadCard checkParamQALeadCard = new CheckParamQALeadCard(driver);
+        MainMenuCalendar mainMenuCalendar = new MainMenuCalendar(driver);
+        CheckStatusEvent checkStatusEvent = new CheckStatusEvent(driver);
         mainPage.open();
-        mainMenuComponent.clickCourseTesting();
-        clickToCardCourse.clickToCard();
-        checkParamQALeadCard.CheckCardQaLead();
+        mainMenuCalendar.clickCalendarEvents();
+        checkStatusEvent.checkStatusEvents();
+
 
     }
 
-    @AfterEach
-    public void close() {
-        if (this.driver != null) {
-            this.driver.close();
-            this.driver.quit();
-        }
-    }
+//    @AfterEach
+//    public void close() {
+//        if (this.driver != null) {
+//            this.driver.close();
+//            this.driver.quit();
+//        }
+//
+//    }
 }
-
-

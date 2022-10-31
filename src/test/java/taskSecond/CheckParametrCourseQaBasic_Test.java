@@ -8,6 +8,7 @@ import data.DriverData;
 import exception.BrowserNotSupportException;
 import factory.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -41,10 +42,16 @@ public class CheckParametrCourseQaBasic_Test {
         CheckParamQaBasicCard checkParamQaBasicCard = new CheckParamQaBasicCard(driver);
         mainPage.open();
         mainMenuComponent.clickCourseTesting();
-       clickToCardCourserQaBasic.clickToCard();
-       checkParamQaBasicCard.CheckCardQaBasic();
+        clickToCardCourserQaBasic.clickToCard();
+        checkParamQaBasicCard.CheckCardQaBasic();
 
+    }
 
-
+    @AfterEach
+    public void close() {
+        if (this.driver != null) {
+            this.driver.close();
+            this.driver.quit();
+        }
     }
 }

@@ -57,30 +57,14 @@ public abstract class AbsBasePages {
     public void explicitWait(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Integer.parseInt(explisityWait));
         wait.until(ExpectedConditions.visibilityOf(element));
-
     }
 
     public void moveToElement(WebElement elementFirst, WebElement elementSecond) {
         action.moveToElement(elementFirst).moveToElement(elementSecond).click().perform();
     }
 
-    public void fillField(WebElement element, String input) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.clear();
-        element.sendKeys(input);
-    }
-
     public void clickToElement(WebElement element) {
         element.click();
-    }
-
-
-    public void sendDropDownMenu(WebElement elementFirst, WebElement elementSecond) throws InterruptedException {
-        Thread.sleep(2000);
-        elementFirst.click();
-        explicitWait(elementSecond);
-        elementSecond.click();
-
     }
 
     public void scrolltoElement (WebElement element){
