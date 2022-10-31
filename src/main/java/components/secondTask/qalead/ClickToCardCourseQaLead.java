@@ -1,16 +1,13 @@
-package components.secondTask;
+package components.secondTask.qalead;
 
-import components.MainPage;
-import components.firstTask.CountCurse;
 import components.firstTask.MainMenuComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.AbsBasePages;
 
-public class ClickToCardCourse extends MainMenuComponent {
+public class ClickToCardCourseQaLead extends MainMenuComponent {
 
-    public ClickToCardCourse(WebDriver driver) {
+    public ClickToCardCourseQaLead(WebDriver driver) {
         super(driver);
     }
 

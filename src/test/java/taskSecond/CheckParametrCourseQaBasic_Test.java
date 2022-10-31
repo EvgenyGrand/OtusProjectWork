@@ -1,10 +1,9 @@
 package taskSecond;
 
 import components.MainPage;
-import components.firstTask.CountCurse;
 import components.firstTask.MainMenuComponent;
-import components.secondTask.CheckParamQALeadCard;
-import components.secondTask.ClickToCardCourse;
+import components.secondTask.qabasic.CheckParamQaBasicCard;
+import components.secondTask.qabasic.ClickToCardCourserQaBasic;
 import data.DriverData;
 import exception.BrowserNotSupportException;
 import factory.WebDriverFactory;
@@ -14,7 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
-public class CheckParametrCourse_Test {
+public class CheckParametrCourseQaBasic_Test {
 
     private WebDriver driver;
 
@@ -34,18 +33,18 @@ public class CheckParametrCourse_Test {
 
 
     @Test
-    public void CheckParametrCard(){
+    public void CheckParametrCard() {
         driver.manage().window().maximize();
         MainPage mainPage = new MainPage(driver);
         MainMenuComponent mainMenuComponent = new MainMenuComponent(driver);
-        ClickToCardCourse clickToCardCourse = new ClickToCardCourse(driver);
-        CheckParamQALeadCard checkParamQALeadCard = new CheckParamQALeadCard(driver);
+        ClickToCardCourserQaBasic clickToCardCourserQaBasic = new ClickToCardCourserQaBasic(driver);
+        CheckParamQaBasicCard checkParamQaBasicCard = new CheckParamQaBasicCard(driver);
         mainPage.open();
         mainMenuComponent.clickCourseTesting();
-        clickToCardCourse.clickToCard();
-        checkParamQALeadCard.CheckCardQaLead();
+       clickToCardCourserQaBasic.clickToCard();
+       checkParamQaBasicCard.CheckCardQaBasic();
+
+
 
     }
 }
-
-

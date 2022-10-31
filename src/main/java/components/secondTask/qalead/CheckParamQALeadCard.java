@@ -1,4 +1,4 @@
-package components.secondTask;
+package components.secondTask.qalead;
 
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-public class CheckParamQALeadCard extends ClickToCardCourse{
+public class CheckParamQALeadCard extends ClickToCardCourseQaLead {
     public CheckParamQALeadCard(WebDriver driver) {
         super(driver);
     }
@@ -17,7 +17,7 @@ public class CheckParamQALeadCard extends ClickToCardCourse{
     @FindBy(css = "div.sc-182qdc9-3.hJucqK")
     private WebElement discription;
 
-    @FindBy(css = "div.i28ik1-0.ftxXhv.sc-10wn8wt-5.cfoBaL")
+    @FindBy(css = "#__next > div.sc-1l5foaq-0.gCyyUk.sc-1gmm0i0-0.bHUXbO > div.sc-1l5foaq-1.knewyH > div > section > div.x072mc-0.sc-10wn8wt-1.fntjjk.iKpZHT > div > div:nth-child(2) > p")
     private WebElement timeofCourse;
 
 
