@@ -28,14 +28,12 @@ public abstract class AbsBasePages {
     protected Actions action;
 
 
-
-
     public AbsBasePages(WebDriver driver) {
         this.driver = driver;
         this.action = new Actions(driver);
 
 
-        PageFactory.initElements(driver,  this);
+        PageFactory.initElements(driver, this);
 
     }
 
@@ -67,10 +65,18 @@ public abstract class AbsBasePages {
         element.click();
     }
 
-    public void scrolltoElement (WebElement element){
+    public void scrolltoElement(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
+    public void sendDropDownMenu(WebElement elementFirst, WebElement elementSecond) {
+        scrolltoElement(elementFirst);
+        explicitWait(elementFirst);
+        elementFirst.click();
+        explicitWait(elementSecond);
+        elementSecond.click();
+
+    }
 }
 
 

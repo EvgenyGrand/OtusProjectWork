@@ -1,10 +1,8 @@
-package taskThree;
+package taskFouth;
 
 import components.MainPage;
-import components.firstTask.CountCurse;
-import components.firstTask.MainMenuComponent;
-import components.thirdTask.CheckStatusEvent;
-import components.thirdTask.MainMenuCalendar;
+import components.fouthTask.CheckStatusEvent;
+import components.fouthTask.MainMenuCalendar;
 import data.DriverData;
 import exception.BrowserNotSupportException;
 import factory.WebDriverFactory;
@@ -43,6 +41,7 @@ public class CheckStausCardCalendar_Test {
         CheckStatusEvent checkStatusEvent = new CheckStatusEvent(driver);
         mainPage.open();
         mainMenuCalendar.clickCalendarEvents();
+        mainMenuCalendar.changeTypeEvents();
         checkStatusEvent.checkStatusEvents();
 
 
