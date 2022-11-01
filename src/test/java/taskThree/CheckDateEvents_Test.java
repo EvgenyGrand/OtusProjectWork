@@ -1,24 +1,23 @@
-package taskFouth;
+package taskThree;
 
 import components.MainPage;
-import components.fouthTask.CheckStatusEvents;
 import components.fouthTask.MainMenuCalendar;
+import components.thirdTask.CheckDateEvent;
 import data.DriverData;
 import exception.BrowserNotSupportException;
 import factory.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import taskThree.CheckDateEvents_Test;
+import taskFirst.CheckCountCurse_Test;
 
-public class CheckStausCardCalendar_Test {
+public class CheckDateEvents_Test {
 
     private WebDriver driver;
-    protected org.apache.logging.log4j.Logger logger = LogManager.getLogger(CheckStausCardCalendar_Test.class);
+    protected org.apache.logging.log4j.Logger logger = LogManager.getLogger(CheckDateEvents_Test.class);
 
     @BeforeAll
     public static void init() {
@@ -36,26 +35,28 @@ public class CheckStausCardCalendar_Test {
     }
 
     @Test
-    public void checkOtusCourses() {
+    public void checkDateEvents() {
         driver.manage().window().maximize();
 
         MainPage mainPage = new MainPage(driver);
         MainMenuCalendar mainMenuCalendar = new MainMenuCalendar(driver);
-        CheckStatusEvents checkStatusEvent = new CheckStatusEvents(driver);
+        CheckDateEvent checkDateEvents = new CheckDateEvent(driver);
         mainPage.open();
         mainMenuCalendar.clickCalendarEvents();
-        mainMenuCalendar.changeTypeEvents();
-        checkStatusEvent.checkStatusEvents();
+        checkDateEvents.checkSDateEvents();
+
+
 
 
     }
 
-    @AfterEach
-    public void close() {
-        if (this.driver != null) {
-            this.driver.close();
-            this.driver.quit();
-        }
-
-    }
+//    @AfterEach
+//    public void close() {
+//        if (this.driver != null) {
+//            this.driver.close();
+//            this.driver.quit();
+//        }
+//
+//    }
 }
+

@@ -8,15 +8,18 @@ import data.DriverData;
 import exception.BrowserNotSupportException;
 import factory.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.logging.log4j.LogManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
+import taskFouth.CheckStausCardCalendar_Test;
 
 public class CheckParametrCourseQaBasic_Test {
 
     private WebDriver driver;
+    protected org.apache.logging.log4j.Logger logger = LogManager.getLogger(CheckParametrCourseQaBasic_Test.class);
 
     @BeforeAll
     public static void init() {

@@ -7,8 +7,8 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class CheckStatusEvent extends MainMenuCalendar {
-    public CheckStatusEvent(WebDriver driver) {
+public class CheckStatusEvents extends MainMenuCalendar {
+    public CheckStatusEvents(WebDriver driver) {
         super(driver);
     }
 

@@ -1,9 +1,6 @@
 package pages;
 
 
-import net.bytebuddy.asm.Advice;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,10 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Date;
 import java.util.Locale;
-import java.util.logging.LogManager;
 
-public abstract class AbsBasePages {
+public abstract class AbsBasePages  {
 
 
     private String hostname = System.getProperty("base.url").toLowerCase(Locale.ROOT);
@@ -77,7 +74,15 @@ public abstract class AbsBasePages {
         elementSecond.click();
 
     }
-}
+
+    public Date Date(){
+        Date date = new Date();
+        return date;
+    }
+
+
+    }
+
 
 
 

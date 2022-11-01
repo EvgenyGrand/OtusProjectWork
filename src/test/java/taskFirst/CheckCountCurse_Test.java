@@ -7,6 +7,8 @@ import data.DriverData;
 import exception.BrowserNotSupportException;
 import factory.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import net.bytebuddy.asm.Advice;
+import org.apache.logging.log4j.LogManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,11 +18,12 @@ import org.openqa.selenium.WebDriver;
 public class CheckCountCurse_Test {
 
     private WebDriver driver;
+    protected org.apache.logging.log4j.Logger logger = LogManager.getLogger(CheckCountCurse_Test.class);
 
     @BeforeAll
     public static void init() {
-        WebDriverManager.chromedriver().setup();
-        WebDriverManager.firefoxdriver().setup();
+       WebDriverManager.chromedriver().setup();
+       WebDriverManager.firefoxdriver().setup();
 
 
     }

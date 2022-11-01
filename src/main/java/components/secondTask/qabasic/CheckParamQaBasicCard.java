@@ -16,7 +16,7 @@ public class CheckParamQaBasicCard extends ClickToCardCourserQaBasic {
     @FindBy(css = "div.sc-182qdc9-3.hJucqK")
     private WebElement discription;
 
-    @FindBy(css = "#__next > div.sc-1l5foaq-0.gCyyUk.sc-1gmm0i0-0.bHUXbO > div.sc-1l5foaq-1.knewyH > div > section > div.x072mc-0.sc-10wn8wt-1.fntjjk.iKpZHT > div > div:nth-child(3) > p")
+    @FindBy(xpath = "//*[contains(text(), '4 месяца')]")
     private WebElement timeofCourse;
 
 

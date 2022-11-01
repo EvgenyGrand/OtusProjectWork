@@ -8,6 +8,7 @@ import data.DriverData;
 import exception.BrowserNotSupportException;
 import factory.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.logging.log4j.LogManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,6 +18,7 @@ import org.openqa.selenium.WebDriver;
 public class CheckParametrCourseQaLead_Test {
 
     private WebDriver driver;
+    protected org.apache.logging.log4j.Logger logger = LogManager.getLogger(CheckParametrCourseQaLead_Test.class);
 
     @BeforeAll
     public static void init() {
