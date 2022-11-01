@@ -5,10 +5,11 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.AbsBasePages;
 
 import java.util.List;
 
-public class CheckDateEvent extends CheckStatusEvents {
+public class CheckDateEvent extends AbsBasePages {
 
     public CheckDateEvent(WebDriver driver) {
         super(driver);

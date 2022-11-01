@@ -4,8 +4,9 @@ import components.firstTask.MainMenuComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.AbsBasePages;
 
-public class ClickToCardCourserQaBasic extends MainMenuComponent {
+public class ClickToCardCourserQaBasic extends AbsBasePages {
     public ClickToCardCourserQaBasic(WebDriver driver) {
         super(driver);
     }

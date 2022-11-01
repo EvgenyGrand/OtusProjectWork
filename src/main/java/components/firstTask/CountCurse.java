@@ -4,10 +4,11 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.AbsBasePages;
 
 import java.util.List;
 
-public class CountCurse extends MainMenuComponent {
+public class CountCurse extends AbsBasePages {
 
     public CountCurse(WebDriver driver) {
         super(driver);

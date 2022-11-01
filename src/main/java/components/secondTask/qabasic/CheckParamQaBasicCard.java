@@ -4,8 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.AbsBasePages;
 
-public class CheckParamQaBasicCard extends ClickToCardCourserQaBasic {
+public class CheckParamQaBasicCard extends AbsBasePages {
     public CheckParamQaBasicCard(WebDriver driver) {
         super(driver);
     }

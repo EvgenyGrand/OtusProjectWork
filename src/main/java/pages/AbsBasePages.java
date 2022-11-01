@@ -16,8 +16,6 @@ public abstract class AbsBasePages  {
 
 
     private String hostname = System.getProperty("base.url").toLowerCase(Locale.ROOT);
-    private String login = System.getProperty("login").toLowerCase(Locale.ROOT);
-    private String password = System.getProperty("password").toLowerCase(Locale.ROOT);
     private String explisityWait = System.getProperty("explisityWait").toLowerCase(Locale.ROOT);
 
 
@@ -38,16 +36,6 @@ public abstract class AbsBasePages  {
         driver.get(hostname);
     }
 
-
-    public String inputLogin() {
-        System.getProperty(login);
-        return login;
-    }
-
-    public String inputPassword() {
-        System.getProperty(password);
-        return password;
-    }
 
     public void explicitWait(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Integer.parseInt(explisityWait));
