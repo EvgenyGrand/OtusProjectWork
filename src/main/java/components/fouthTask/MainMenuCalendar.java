@@ -18,7 +18,7 @@ public class MainMenuCalendar extends AbsBasePages {
     @FindBy(xpath = "//*[contains(@class, 'header2-menu_main')]/*[contains(@class, 'header2-menu__item')][.//*[text()='События']]//a[@title='Календарь мероприятий']")
     private WebElement subMenu;
 
-    @FindBy(xpath = "//p[contains(text(), 'События')]")
+    @FindBy(xpath = "//p[contains(text(), 'События')][1]")
     private WebElement openDropdownMenu;
 
     @FindBy(xpath = "//*[not(contains(@rel, 'nofollow')) and contains(text(),'мероприятий')]")

@@ -14,6 +14,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import taskFirst.CheckCountCurse_Test;
 
+import java.text.ParseException;
+
 public class CheckDateEvents_Test {
 
     private WebDriver driver;
@@ -35,7 +37,7 @@ public class CheckDateEvents_Test {
     }
 
     @Test
-    public void checkDateEvents() {
+    public void checkDateEvents() throws ParseException {
         driver.manage().window().maximize();
 
         MainPage mainPage = new MainPage(driver);
@@ -43,7 +45,10 @@ public class CheckDateEvents_Test {
         CheckDateEvent checkDateEvents = new CheckDateEvent(driver);
         mainPage.open();
         mainMenuCalendar.clickCalendarEvents();
-        checkDateEvents.checkSDateEvents();
+        checkDateEvents.actualDate();
+//        checkDateEvents.checkSDateEvents();
+        
+
 
 
 

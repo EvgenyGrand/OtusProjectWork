@@ -1,6 +1,7 @@
 package pages;
 
 
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,10 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public abstract class AbsBasePages  {
+public abstract class AbsBasePages {
 
 
     private String hostname = System.getProperty("base.url").toLowerCase(Locale.ROOT);
@@ -50,12 +52,12 @@ public abstract class AbsBasePages  {
         element.click();
     }
 
-    public void scrolltoElement(WebElement element) {
+    public void scrollToElement(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
     public void sendDropDownMenu(WebElement elementFirst, WebElement elementSecond) {
-        scrolltoElement(elementFirst);
+        scrollToElement(elementFirst);
         explicitWait(elementFirst);
         elementFirst.click();
         explicitWait(elementSecond);
@@ -63,13 +65,15 @@ public abstract class AbsBasePages  {
 
     }
 
-    public Date Date(){
-        Date date = new Date();
-        return date;
-    }
+    public void actualDate(){
+        Date currentDate = new Date();
+        SimpleDateFormat dateFormat = null;
+        dateFormat =  new SimpleDateFormat("dd MMMM");
+        System.out.println(dateFormat.format(currentDate));
 
+}
+}
 
-    }
 
 
 

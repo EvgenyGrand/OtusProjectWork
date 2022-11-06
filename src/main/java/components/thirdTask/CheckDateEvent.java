@@ -1,12 +1,14 @@
 package components.thirdTask;
 
-import components.fouthTask.CheckStatusEvents;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.AbsBasePages;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class CheckDateEvent extends AbsBasePages {
@@ -16,15 +18,27 @@ public class CheckDateEvent extends AbsBasePages {
     }
 
 
-
-    @FindBy(css = "span.dod_new-event__date-text")
+    @FindBy(xpath = "//span[contains(text(), 'ноября')]")
     private List<WebElement> dateOfEvents;
 
-    public void checkSDateEvents() {
+    public void checkSDateEvents() throws ParseException {
         for (WebElement events : dateOfEvents) {
-            Assertions.assertEquals("31 октября", events.getText());
-
+            System.out.println(events.getText());
+//            DateFormat format = new SimpleDateFormat("dd,MMMM");
+//            Date date = format.parse(String.valueOf(events));
+//            System.out.println(date);
 
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+

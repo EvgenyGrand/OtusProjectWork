@@ -15,7 +15,7 @@ public class ClickToCardCourserQaBasic extends AbsBasePages {
     private WebElement cardOfQaBasic;
 
     public void clickToCard() {
-        scrolltoElement(cardOfQaBasic);
+        scrollToElement(cardOfQaBasic);
         explicitWait(cardOfQaBasic);
         clickToElement(cardOfQaBasic);
     }

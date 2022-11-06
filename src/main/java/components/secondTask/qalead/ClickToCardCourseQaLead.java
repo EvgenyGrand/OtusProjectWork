@@ -16,7 +16,7 @@ public class ClickToCardCourseQaLead extends AbsBasePages {
     private WebElement cardOfQaLead;
 
     public void clickToCard() {
-        scrolltoElement(cardOfQaLead);
+        scrollToElement(cardOfQaLead);
         explicitWait(cardOfQaLead);
         clickToElement(cardOfQaLead);
 
