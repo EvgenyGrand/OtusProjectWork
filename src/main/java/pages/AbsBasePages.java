@@ -68,7 +68,7 @@ public abstract class AbsBasePages {
     public void actualDate(){
         Date currentDate = new Date();
         SimpleDateFormat dateFormat = null;
-        dateFormat =  new SimpleDateFormat("dd MMMM");
+        dateFormat =  new SimpleDateFormat("d MMMM");
         System.out.println(dateFormat.format(currentDate));
 
 }
