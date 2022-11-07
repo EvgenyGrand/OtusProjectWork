@@ -1,7 +1,6 @@
 package pages;
 
 
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,19 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 public abstract class AbsBasePages {
 
 
-    private String hostname = System.getProperty("base.url").toLowerCase(Locale.ROOT);
-    private String explisityWait = System.getProperty("explisityWait").toLowerCase(Locale.ROOT);
-
-
     protected WebDriver driver;
     protected Actions action;
+    private final String hostname = System.getProperty("base.url").toLowerCase(Locale.ROOT);
+    private final String explisityWait = System.getProperty("explisityWait").toLowerCase(Locale.ROOT);
 
 
     public AbsBasePages(WebDriver driver) {
@@ -65,14 +60,9 @@ public abstract class AbsBasePages {
 
     }
 
-    public void actualDate(){
-        Date currentDate = new Date();
-        SimpleDateFormat dateFormat = null;
-        dateFormat =  new SimpleDateFormat("d MMMM");
-        System.out.println(dateFormat.format(currentDate));
 
 }
-}
+
 
 
 
