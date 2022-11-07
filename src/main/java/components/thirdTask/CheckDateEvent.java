@@ -19,7 +19,8 @@ public class CheckDateEvent extends AbsBasePages {
     }
 
 
-    @FindBy(xpath = "//span[contains(text(), 'ноября')]")
+//    @FindBy(xpath = "//span[contains(text(), 'ноября')]")
+    @FindBy(xpath = "//*[@class='dod_new-event__date-text' and(not(contains(text(), ':')))]")
     private List<WebElement> dateOfEvents;
 
     public void checkSDateEvents() throws ParseException {
